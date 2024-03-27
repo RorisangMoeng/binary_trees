@@ -27,27 +27,3 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 	new_node->right = NULL;
 	return (new_node); /* Return a pointer to the new node */
 }
-
-/* Example usage */
-/**
- * main - Entry point of the program
- * Return: 0 on success, 1 on failure
- */
-
-int main(void)
-{
-	/* Creating a binary tree node with value 10 and no parent  */
-	binary_tree_t *root = binary_tree_node(NULL, 10);
-
-	if (root == NULL)
-	{
-		fprintf(stderr, "Failed to create root node\n");
-		return (1);
-	}
-
-	printf("Created binary tree node with value: %d\n", root->value);
-
-	/* Freeing the memory allocated for the root node */
-	free(root);
-	return (0);
-}
